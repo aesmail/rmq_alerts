@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    rmq_alerts (0.1)
+      ruby_motion_query (>= 0.9.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.3.2)
+    ruby_motion_query (0.9.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  rmq_alerts!
