@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{rmq_alerts is an RMQ plugin that makes it very easy to create alert messages in iOS}
   spec.summary       = %q{rmq_alerts is an RMQ plugin that makes it very easy to create alert messages in iOS}
   spec.homepage      = ""
-  spec.license       = ""
+  spec.license       = "MIT"
 
   files = []
   files << 'README.md'
