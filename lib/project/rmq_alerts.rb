@@ -6,15 +6,15 @@ module RubyMotionQuery
     # @return [RMQ]
     def alert(title, message, cancel_button = 'OK', other_buttons = [], delegate = nil)
       # TODO UIAlertView is deprecated in iOS 8. Should use UIAlertController for the future.
-      alert_view = UIAlertView.new
-      alert_view.title = title
-      alert_view.message = message
-      alert_view.addButtonWithTitle(cancel_button)
-      alert_view.cancelButtonIndex = 0
-      other_buttons.each do |b|
-        alert_view.addButtonWithTitle(b)
-      end
-      alert_view.delegate = delegate
+      alert_view = UIAlertView.alloc.initWithTitle(
+        title,
+        message: message,
+        delegate: delegate,
+        cancelButtonTitle: cancel_button,
+        otherButtonTitles: nil
+      )
+      Array(other_buttons).each { |button| alert_view.addButtonWithTitle(button) }
+
       alert_view.show
       rmq(alert_view)
     end
