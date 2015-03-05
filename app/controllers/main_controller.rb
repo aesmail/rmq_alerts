@@ -7,7 +7,7 @@ class MainController < UIViewController
 
     rmq.stylesheet = MainStylesheet
     rmq(self.view).apply_style :root_view
-    
+
     rmq.append(UIButton, :alert_button).on(:touch) do |sender, event|
       rmq.alert('Hello', 'This is so easy, right?', cancel_button='Yes', other_buttons=['No', 'Maybe'], delegate=self)
     end
@@ -19,7 +19,7 @@ class MainController < UIViewController
   def willAnimateRotationToInterfaceOrientation(orientation, duration: duration)
     rmq.all.reapply_styles
   end
-  
+
   def alertView(av, clickedButtonAtIndex: index)
     if index == 0
       rmq.alert('Yes', 'Thank you :)')
