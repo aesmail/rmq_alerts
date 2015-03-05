@@ -43,7 +43,7 @@ rmq.alert('title', 'message', cancel_button='Yes', other_buttons=['No'], delegat
 The full method looks like this:
 
 ```ruby
-rmq.alert(title, message, cancel_button='Yes', other_buttons=['No'], delegate=self, view_style=UIAlertViewStyleDefault)
+rmq.alert('title', 'message', cancel_button='Yes', other_buttons=['No'], delegate=self, view_style=UIAlertViewStyleDefault)
 ```
 
 It returns an rmq instance of the alert view.
