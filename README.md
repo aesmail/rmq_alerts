@@ -36,10 +36,14 @@ rmq.alert('Title goes here', 'Message goes here')
 rmq.alert('Ops!', 'No connectivity!', cancel_button = 'Fine')
 ```
 
+```ruby
+rmq.alert('title', 'message', cancel_button='Yes', other_buttons=['No'], delegate=self)
+```
+
 The full method looks like this:
 
 ```ruby
-rmq.alert('title', 'message', cancel_button='Yes', other_buttons=['No'], delegate=self)
+rmq.alert(title, message, cancel_button='Yes', other_buttons=['No'], delegate=self, view_style=UIAlertViewStyleDefault)
 ```
 
 It returns an rmq instance of the alert view.
