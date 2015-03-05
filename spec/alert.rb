@@ -41,4 +41,10 @@ describe 'RMQ alerts' do
 
     view.delegate.should.equal(delegate)
   end
+
+  it 'should allow customizing the view style' do
+    delegate = 'a delegate'
+    view = @rmq.alert('title', 'message', 'Yes',[], delegate, UIAlertViewStyleLoginAndPasswordInput).get
+    view.alertViewStyle.should.equal(UIAlertViewStyleLoginAndPasswordInput)
+  end
 end
