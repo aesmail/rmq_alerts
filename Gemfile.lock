@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rmq_alerts (0.2)
+    rmq_alerts (1.0)
       ruby_motion_query (>= 0.9.0)
 
 GEM
@@ -16,3 +16,6 @@ PLATFORMS
 DEPENDENCIES
   rake
   rmq_alerts!
+
+BUNDLED WITH
+   1.16.4
